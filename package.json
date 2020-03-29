@@ -1,0 +1,25 @@
+{
+  "name": "over-engineered-webpage",
+  "version": "1.0.0",
+  "description": "James's overengineered webpage",
+  "scripts": {
+    "test": "jest",
+    "test-ci": "jest --ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamescoward/over-engineered-webpage.git"
+  },
+  "keywords": [
+    "serverless"
+  ],
+  "author": "James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamescoward/over-engineered-webpage/issues"
+  },
+  "homepage": "https://github.com/jamescoward/over-engineered-webpage#readme",
+  "devDependencies": {
+    "jest": "^25.2.3"
+  }
+}
