@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+"
+    <html>
+      <head>
+        <title>Overengineered Webpage</title>
+      </head>
+      <body>
+        <h1>Overengineered webpage</h1>
+      </body>
+    </html>
+  "
+`;

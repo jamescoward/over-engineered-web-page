@@ -1,4 +1,4 @@
-const { renderPage } = require('./renderPage');
+const { renderPage } = require('./renderPage/renderPage');
 
 module.exports.handler = async event => {
   return {
