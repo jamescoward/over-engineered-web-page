@@ -8,7 +8,7 @@ const renderPage = () => {
         <h1>Overengineered webpage</h1>
       </body>
     </html>
-  `
+  `;
 };
 
 module.exports = {
