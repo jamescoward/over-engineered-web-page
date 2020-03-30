@@ -19,9 +19,15 @@ service: over-engineered-webpage
 provider:
   name: aws
   runtime: nodejs12.x
-  profile: serverless-admin
+  stage: ${opt:stage, self:custom.defaultStage}
+  profile: ${self:custom.profiles.${self:provider.stage}}
   region: eu-west-2
   memorySize: 128
+
+custom:
+  defaultStage: dev
+  dev: serverless-admin
+  prod: "" # No profile for prod because credentials are passed directly
 
 functions:
   render-page:
