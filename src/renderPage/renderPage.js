@@ -5,7 +5,7 @@ const renderPage = () => {
         <title>Overengineered Webpage</title>
       </head>
       <body>
-        <h1>Overengineered webpage</h1>
+        <h1>Overengineered webpage - Shiny Version</h1>
       </body>
     </html>
   `;
