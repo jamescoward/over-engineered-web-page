@@ -1,8 +1,8 @@
-name: Deploy to production
+name: Deploy to staging
 
 on:
   push:
-    branches: [prod]
+    branches: [master]
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Deploy using serverless framework
         uses: serverless/github-action@master
         with:
-          args: "deploy --stage prod"
+          args: "deploy --stage staging"
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}

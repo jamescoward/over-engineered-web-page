@@ -4,7 +4,7 @@
 
 - [x] Run tests on PRs to master
 - [x] Deploy to PROD when a PR is merged to master
-- [ ] Separate PROD and staging AWS accounts
+- [x] Separate PROD and staging AWS accounts and deployments
 - [ ] Deploy to branch-based staging when PR is opened
 - [ ] Remove branch-based staging when PR is closed
 - [ ] Add webpack and babel for bundling and modern JS syntax
