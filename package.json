@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "test-ci": "jest --ci",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "deploy": "serverless deploy --stage dev --profile serverless-admin"
   },
   "repository": {
     "type": "git",
