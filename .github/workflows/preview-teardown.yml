@@ -1,27 +1,22 @@
-name: Preview deploy
+name: Preview teardown
 
 on:
   pull_request:
+    types: [closed]
     branches: [master]
 
 jobs:
-  deploy:
+  teardown:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - run: npm ci
-
-      - name: Deploy using serverless framework
+      - name: Teardown using serverless framework
         uses: serverless/github-action@master
         with:
-          args: "deploy --stage ${{ github.head_ref }}"
+          args: "remove --stage ${{ github.head_ref }}"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
