@@ -5,8 +5,8 @@
 - [x] Run tests on PRs to master
 - [x] Deploy to PROD when a PR is merged to master
 - [x] Separate PROD and staging AWS accounts and deployments
-- [ ] Deploy to branch-based staging when PR is opened
-- [ ] Remove branch-based staging when PR is closed
+- [x] Deploy to branch-based staging when PR is opened
+- [x] Remove branch-based staging when PR is closed
 - [ ] Add webpack and babel for bundling and modern JS syntax
 - [ ] Add preact for rendering page
 - [ ] Run integration tests against branch-based staging env
