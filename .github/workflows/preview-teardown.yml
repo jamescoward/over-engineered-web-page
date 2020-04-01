@@ -1,0 +1,19 @@
+name: Preview teardown
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+jobs:
+  teardown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Teardown using serverless framework
+        uses: serverless/github-action@master
+        with:
+          args: "remove --stage ${{ github.head_ref }}"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
