@@ -18,3 +18,15 @@ Possibly:
 - [ ] Have separate staging and prod databases
 - [ ] Deploy Prod and staging to different AWS accounts
 - [ ] Add user authentication with Cognito
+
+## Notes:
+
+Possible way to use stage based table name with fallback
+
+```yml
+custom:
+  tableNames:
+    staging: "dev-table"
+    prod: "prod-table"
+  calculatedTableName: ${self:custom.tableName.${opt:stage}, self:custom.tableName.staging}
+```
