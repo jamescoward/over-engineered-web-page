@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "test-ci": "jest --ci",
-    "lint": "eslint **/*.js",
+    "lint": "eslint '**/*.js'",
     "deploy": "serverless deploy --stage dev --profile serverless-admin",
     "remove": "sls remove --stage dev --profile serverless-admin"
   },
