@@ -6,7 +6,8 @@
     "test": "jest",
     "test-ci": "jest --ci",
     "lint": "eslint **/*.js",
-    "deploy": "serverless deploy --stage dev --profile serverless-admin"
+    "deploy": "serverless deploy --stage dev --profile serverless-admin",
+    "remove": "sls remove --stage dev --profile serverless-admin"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,17 @@
   },
   "homepage": "https://github.com/jamescoward/over-engineered-webpage#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "jest": "^25.2.3",
     "prettier": "^2.0.2",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "husky": {
     "hooks": {

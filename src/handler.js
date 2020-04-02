@@ -1,6 +1,6 @@
-const { renderPage } = require("./renderPage/renderPage");
+import { renderPage } from "./renderPage/renderPage";
 
-module.exports.handler = async () => {
+export const handler = async () => {
   return {
     statusCode: 200,
     body: renderPage(),

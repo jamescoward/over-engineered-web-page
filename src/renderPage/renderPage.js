@@ -1,4 +1,4 @@
-const renderPage = () => {
+export const renderPage = () => {
   return `
     <html>
       <head>
@@ -9,8 +9,4 @@ const renderPage = () => {
       </body>
     </html>
   `;
-};
-
-module.exports = {
-  renderPage,
 };
