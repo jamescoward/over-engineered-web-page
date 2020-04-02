@@ -7,7 +7,7 @@
 - [x] Separate PROD and staging AWS accounts and deployments
 - [x] Deploy to branch-based staging when PR is opened
 - [x] Remove branch-based staging when PR is closed
-- [ ] Add webpack and babel for bundling and modern JS syntax
+- [x] Add webpack and babel for bundling and modern JS syntax
 - [ ] Add preact for rendering page
 - [ ] Run integration tests against branch-based staging env
 - [ ] Add building and deploying static assets to s3/something else
