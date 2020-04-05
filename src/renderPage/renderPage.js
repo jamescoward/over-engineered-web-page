@@ -1,6 +1,6 @@
 import { h } from "preact";
 import render from "preact-render-to-string";
-import MainComponent from "../components/mainComponent/mainComponent";
+import MainComponent from "../components/mainComponent";
 
 export const renderPage = () => {
   return `
