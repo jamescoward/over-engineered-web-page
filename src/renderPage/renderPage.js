@@ -1,3 +1,7 @@
+import { h } from "preact";
+import render from "preact-render-to-string";
+import MainComponent from "../components/mainComponent";
+
 export const renderPage = () => {
   return `
     <html>
@@ -5,7 +9,9 @@ export const renderPage = () => {
         <title>Overengineered Webpage</title>
       </head>
       <body>
-        <h1>Overengineered webpage - Shiny Version</h1>
+        ${render(
+          <MainComponent content="Overengineered webpage - Shiny Version" />
+        )}
       </body>
     </html>
   `;

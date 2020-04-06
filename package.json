@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "test-ci": "jest --ci",
-    "lint": "eslint '**/*.js'",
+    "lint": "eslint '**/*.{js,jsx}'",
     "deploy": "serverless deploy --stage dev --profile serverless-admin",
     "remove": "sls remove --stage dev --profile serverless-admin"
   },
@@ -24,9 +24,11 @@
   "homepage": "https://github.com/jamescoward/over-engineered-webpage#readme",
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@babel/preset-env": "^7.9.0",
     "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
+    "eslint-config-preact": "^1.1.1",
     "husky": "^4.2.3",
     "jest": "^25.2.3",
     "prettier": "^2.0.2",
@@ -35,9 +37,20 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
+  "dependencies": {
+    "preact": "^10.3.4",
+    "preact-render-to-string": "^5.1.4"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^react$": "preact/compat",
+      "^react-dom/test-utils$": "preact/test-utils",
+      "^react-dom$": "preact/compat"
     }
   }
 }
